@@ -42,8 +42,9 @@ def get_dopings_hochberg():
     # all units in um
     # create a cartesian 2D mesh
     Nx = 5000
-    Ny = 100
+    Ny = 300
     Nz = 1
+
     delta = 0.1
     X = np.linspace(-5 -delta, 5+delta, Nx)
     Y = np.linspace(0-delta, 0.22+delta, Ny)
