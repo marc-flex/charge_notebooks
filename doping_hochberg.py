@@ -41,8 +41,8 @@ def apply_gaussian(X: np.array, Y: np.array, doping_values: np.array, x_lim: lis
 def get_dopings_hochberg():
     # all units in um
     # create a cartesian 2D mesh
-    Nx = 5000
-    Ny = 300
+    Nx = 2000
+    Ny = 100
     Nz = 1
 
     delta = 0.1
