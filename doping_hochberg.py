@@ -74,7 +74,7 @@ def get_dopings_hochberg():
     x_lim = list(np.array([-6, -2]))
     y_lim = list(np.array([-0.3, 0.22+delta]))
     source_face = [0, 0, 0, 1]
-    con = 1e18
+    con = 1e19
     ref_con = 1e6
     width = 0.1
     apply_gaussian(X,Y,acceptors, x_lim, y_lim, source_face, con, ref_con, width)
@@ -83,7 +83,7 @@ def get_dopings_hochberg():
     x_lim = list(np.array([2, 6]))
     y_lim = list(np.array([-0.3, 0.22+delta]))
     source_face = [0, 0, 0, 1]
-    con = 1e18
+    con = 1e19
     ref_con = 1e6
     width = 0.1
     apply_gaussian(X,Y,donors, x_lim, y_lim, source_face, con, ref_con, width)
