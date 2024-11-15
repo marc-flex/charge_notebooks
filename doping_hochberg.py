@@ -54,7 +54,7 @@ def get_dopings_hochberg():
     
     # p implant
     x_lim = list(np.array([-6, -0.15]))
-    y_lim = list(np.array([-0.3, 0.09]))
+    y_lim = list(np.array([-0.3, 0.098]))
     source_face = [0, 0, 0, 1]
     con = 7e17
     ref_con = 1e6
@@ -63,7 +63,7 @@ def get_dopings_hochberg():
     
     # n implant
     x_lim = list(np.array([0.15, 6]))
-    y_lim = list(np.array([-0.3, 0.09]))
+    y_lim = list(np.array([-0.3, 0.098]))
     source_face = [0, 0, 0, 1]
     con = 5e17
     ref_con = 1e6
