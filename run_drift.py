@@ -6,7 +6,8 @@ def run_drift(heat_sim):
     try:
         heat_sim.to_file("simulation.hdf5")
         
-        releasePath = "/home/marc/Documents/src/tidy3d-core/_build_release"
+        #releasePath = "/home/marc/Documents/src/tidy3d-core/_build_release"
+        releasePath = "/home/marc/Documents/src/compute/src/Tidy3DCore/_build_local"
         
         configMPI = {
             "FLOW360_MPI_VERSION": "openmpi",
@@ -40,7 +41,9 @@ def run_drift(heat_sim):
         if isinstance(heat_sim, td.HeatSimulation):
             heat_sim_data = td.HeatSimulationData.from_file("output/simulation_data.hdf5.gz")
         elif isinstance(heat_sim, td.HeatChargeSimulation):
+            print("I have run without warnings=????????????????????????????????")
             heat_sim_data = td.HeatChargeSimulationData.from_file("output/simulation_data.hdf5.gz")
+            print("Sooo????????????????????????????????????????????????")
         else:
             print(type(heat_sim))
         

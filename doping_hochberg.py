@@ -8,12 +8,12 @@ def generate_doping_boxes():
     acceptor_boxes = []
     donors_boxes = []
 
-    acceptor_boxes.append(td.ConstantDoping.from_bounds(rmin=[-5, 0, -td.inf], rmax=[5, 0.22, td.inf], concentration=1e15))
+    acceptor_boxes.append(td.ConstantDoping.from_bounds(rmin=[-5, -0.05, -td.inf], rmax=[5, 0.25, td.inf], concentration=1e15))
 
     # p implant
     acceptor_boxes.append(td.GaussianDoping.from_bounds(
         rmin=[-6, -0.3, -td.inf],
-        rmax=[-0.15, 0.098, td.inf], 
+        rmax=[-0.15, 0.09, td.inf], 
         concentration=7e17,
         ref_con=1e6,
         width=0.1,
@@ -22,7 +22,7 @@ def generate_doping_boxes():
     # n implant
     donors_boxes.append(td.GaussianDoping.from_bounds(
         rmin=[0.15, -0.3, -td.inf],
-        rmax=[6, 0.098, td.inf], 
+        rmax=[6, 0.09, td.inf], 
         concentration=5e17,
         ref_con=1e6,
         width=0.1,
@@ -33,6 +33,7 @@ def generate_doping_boxes():
         rmin=[-6, -0.3, -td.inf],
         rmax=[-2, 0.22, td.inf],
         concentration=1e19,
+        # concentration=1e20,
         ref_con=1e6,
         width=0.1,
         source="ymax"))
